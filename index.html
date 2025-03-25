@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1 class="title">Global Currency Converter</h1>
+        <div class="input-group">
+            <select id="fromCurrency">
+                <option value="USD">USD - United States Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+            </select>
+            <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01">
+        </div>
+        <div class="input-group">
+            <select id="toCurrency">
+                <option value="EUR">EUR - Euro</option>
+                <option value="USD">USD - United States Dollar</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+            </select>
+        </div>
+        <button class="convert-btn">Convert</button>
+        <div class="result" id="result">
+            Conversion Result: --
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
