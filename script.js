@@ -43,8 +43,13 @@ const staticMarketTrends = [
 const fromCurrencySelect = document.getElementById('fromCurrency');
 const toCurrencySelect = document.getElementById('toCurrency');
 const amountInput = document.getElementById('amount');
-const convertButton = document.querySelector('.convert-btn');
+const convertBtn = document.getElementById('convertBtn');
 const resultDisplay = document.getElementById('result');
+const swapBtn = document.getElementById('swapCurrencies');
+const currencyTrendsContainer = document.getElementById('currencyTrends');
+
+let fromCurrencyChart = null;
+let toCurrencyChart = null;
 
 function populateCurrencyDropdowns() {
     const currencies = Object.keys(exchangeRates);
