@@ -97,6 +97,37 @@ function convertCurrency() {
         console.error(error);
     }
 }
+
+function swapCurrencies() {
+    const temp = fromCurrencySelect.value;
+    fromCurrencySelect.value = toCurrencySelect.value;
+    toCurrencySelect.value = temp;
+    
+    convertCurrency();
+}
+
+function createStaticCurrencyTrendCards() {
+    staticMarketTrends.forEach(trend => {
+        const trendCard = document.createElement('div');
+        trendCard.classList.add('trend-card', 'mb-3', 'p-2', 'rounded');
+        
+        trendCard.innerHTML = `
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <img src="https://flagcdn.com/w40/${currencyData[trend.currency].flag}.png" class="me-2" style="width: 30px;">
+                    <strong>${trend.currency}</strong>
+                </div>
+                <div class="text-end">
+                    <span class="badge ${trend.isPositive ? 'bg-success' : 'bg-danger'}">
+                        ${trend.isPositive ? '▲' : '▼'} ${Math.abs(trend.change).toFixed(2)}%
+                    </span>
+                </div>
+            </div>
+        `;
+        
+        currencyTrendsContainer.appendChild(trendCard);
+    });
+}
 function getCurrencyName(currencyCode) {
     const currencyNames = {
         "USD": "United States Dollar",
