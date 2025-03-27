@@ -54,3 +54,17 @@ body, html {
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
+.converter-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.converter-header h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--secondary-color);
+}
