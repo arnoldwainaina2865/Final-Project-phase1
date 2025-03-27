@@ -20,3 +20,19 @@ body, html {
     background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7a990f') no-repeat center center fixed;
     background-size: cover;
 }
+
+.currency-converter-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--background-gradient);
+    padding: 20px;
+}
+
+.market-sidebar {
+    background: var(--market-pulse-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 15px 0 0 15px;
+    padding: 20px;
+    color: rgb(111, 174, 118);
+}
