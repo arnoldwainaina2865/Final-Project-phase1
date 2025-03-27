@@ -12,7 +12,7 @@ const currencyData = {
     BRL: { name: "Brazilian Real", flag: "br", symbol: "R$" },
    
 };
-
+// major currencies
 const exchangeRates = {
     USD: 1.0,
     EUR: 0.92,
