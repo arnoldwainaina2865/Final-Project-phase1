@@ -94,3 +94,12 @@ body, html {
     align-items: center;
     margin-top: 20px;
 }
+.result-display {
+    display: flex;
+    flex-direction: column;
+    background: #a19c9c;
+    padding: 15px;
+    border-radius: 10px;
+    flex-grow: 1;
+    margin-right: 15px;
+}
