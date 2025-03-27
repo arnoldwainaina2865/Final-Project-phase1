@@ -68,3 +68,22 @@ body, html {
 .subtitle {
     color: var(--secondary-color);
 }
+
+.conversion-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.swap-icon {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.swap-icon button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
