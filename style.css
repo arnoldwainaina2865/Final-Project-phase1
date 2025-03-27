@@ -103,3 +103,15 @@ body, html {
     flex-grow: 1;
     margin-right: 15px;
 }
+
+.convert-button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.convert-button:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+}
