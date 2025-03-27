@@ -36,3 +36,21 @@ body, html {
     padding: 20px;
     color: rgb(111, 174, 118);
 }
+
+.market-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.currency-trends {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.converter-section {
+    background: var(--converter-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 0 15px 15px 0;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
