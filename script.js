@@ -1,20 +1,16 @@
-const exchangeRates = {
-    "USD": 1.0,
-    "EUR": 0.92,
-    "GBP": 0.79,
-    "JPY": 149.50,
-    "CAD": 1.35,
-    "AUD": 1.52,
-    "CHF": 0.89,
-    "CNY": 7.24,
-    "INR": 83.20,
-    "BRL": 5.02,
-    "RUB": 91.50,
-    "KRW": 1330.00,
-    "SGD": 1.34,
-    "MXN": 17.25,
-    "SAR": 3.75,
-    "KES": 127.50
+const currencyData = {
+    USD: { name: "United States Dollar", flag: "us", symbol: "$" },
+    EUR: { name: "Euro", flag: "eu", symbol: "€" },
+    GBP: { name: "British Pound", flag: "gb", symbol: "£" },
+    JPY: { name: "Japanese Yen", flag: "jp", symbol: "¥" },
+    CAD: { name: "Canadian Dollar", flag: "ca", symbol: "CA$" },
+    AUD: { name: "Australian Dollar", flag: "au", symbol: "A$" },
+    CHF: { name: "Swiss Franc", flag: "ch", symbol: "CHF" },
+    CNY: { name: "Chinese Yuan", flag: "cn", symbol: "¥" },
+    INR: { name: "Indian Rupee", flag: "in", symbol: "₹" },
+    KES: { name: "Kenyan Shilling", flag: "ke", symbol: "KSh" },
+    BRL: { name: "Brazilian Real", flag: "br", symbol: "R$" },
+   
 };
 
 const fromCurrencySelect = document.getElementById('fromCurrency');
