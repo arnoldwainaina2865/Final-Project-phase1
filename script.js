@@ -13,6 +13,21 @@ const currencyData = {
    
 };
 
+const exchangeRates = {
+    USD: 1.0,
+    EUR: 0.92,
+    GBP: 0.79,
+    JPY: 149.50,
+    CAD: 1.35,
+    AUD: 1.52,
+    CHF: 0.88,
+    CNY: 7.15,
+    INR: 83.20,
+    KES: 129.50,
+    BRL: 4.95,
+   
+};
+
 const fromCurrencySelect = document.getElementById('fromCurrency');
 const toCurrencySelect = document.getElementById('toCurrency');
 const amountInput = document.getElementById('amount');
