@@ -4,101 +4,75 @@
       "code": "USD",
       "name": "United States Dollar",
       "symbol": "$",
-      "country": "United States"
+      "country": "United States",
+      "flag": "us"
     },
     {
       "code": "EUR",
       "name": "Euro",
       "symbol": "€",
-      "country": "European Union"
+      "country": "European Union",
+      "flag": "eu"
     },
     {
       "code": "GBP",
       "name": "British Pound Sterling",
       "symbol": "£",
-      "country": "United Kingdom"
+      "country": "United Kingdom",
+      "flag": "gb"
     },
     {
       "code": "JPY",
       "name": "Japanese Yen",
       "symbol": "¥",
-      "country": "Japan"
+      "country": "Japan",
+      "flag": "jp"
     },
     {
       "code": "CAD",
       "name": "Canadian Dollar",
       "symbol": "CA$",
-      "country": "Canada"
+      "country": "Canada",
+      "flag": "ca"
     },
     {
       "code": "AUD",
       "name": "Australian Dollar",
       "symbol": "A$",
-      "country": "Australia"
+      "country": "Australia",
+      "flag": "au"
     },
     {
       "code": "CHF",
       "name": "Swiss Franc",
       "symbol": "CHF",
-      "country": "Switzerland"
+      "country": "Switzerland",
+      "flag": "ch"
     },
     {
       "code": "CNY",
       "name": "Chinese Yuan",
       "symbol": "¥",
-      "country": "China"
+      "country": "China",
+      "flag": "cn"
     },
     {
       "code": "INR",
       "name": "Indian Rupee",
       "symbol": "₹",
-      "country": "India"
-    },
-    {
-      "code": "BRL",
-      "name": "Brazilian Real",
-      "symbol": "R$",
-      "country": "Brazil"
-    },
-    {
-      "code": "RUB",
-      "name": "Russian Ruble",
-      "symbol": "₽",
-      "country": "Russia"
-    },
-    {
-      "code": "KRW",
-      "name": "South Korean Won",
-      "symbol": "₩",
-      "country": "South Korea"
-    },
-    {
-      "code": "SGD",
-      "name": "Singapore Dollar",
-      "symbol": "S$",
-      "country": "Singapore"
-    },
-    {
-      "code": "MXN",
-      "name": "Mexican Peso",
-      "symbol": "Mex$",
-      "country": "Mexico"
-    },
-    {
-      "code": "SAR",
-      "name": "Saudi Riyal",
-      "symbol": "﷼",
-      "country": "Saudi Arabia"
+      "country": "India",
+      "flag": "in"
     },
     {
       "code": "KES",
       "name": "Kenyan Shilling",
-      "symbol": "Ksh",
-      "country": "Kenya"
+      "symbol": "KSh",
+      "country": "Kenya",
+      "flag": "ke"
     }
   ],
   "exchangeRates": {
-    "lastUpdated": "2024-03-25",
+    "lastUpdated": "2024-03-26",
     "rates": {
       "USD": 1.0,
       "EUR": 0.92,
@@ -106,16 +80,32 @@
       "JPY": 149.50,
       "CAD": 1.35,
       "AUD": 1.52,
-      "CHF": 0.89,
-      "CNY": 7.24,
+      "CHF": 0.88,
+      "CNY": 7.15,
       "INR": 83.20,
-      "BRL": 5.02,
-      "RUB": 91.50,
-      "KRW": 1330.00,
-      "SGD": 1.34,
-      "MXN": 17.25,
-      "SAR": 3.75,
-      "KES": 127.50
+      "KES": 129.50
     }
+  },
+  "marketTrends": {
+    "currencyPairs": [
+      {
+        "pair": "USD/EUR",
+        "currentRate": 0.92,
+        "change24h": -0.15,
+        "changePercentage": -0.16
+      },
+      {
+        "pair": "USD/GBP",
+        "currentRate": 0.79,
+        "change24h": 0.05,
+        "changePercentage": 0.06
+      },
+      {
+        "pair": "USD/KES",
+        "currentRate": 127.50,
+        "change24h": 0.25,
+        "changePercentage": 0.20
+      }
+    ]
   }
 }
