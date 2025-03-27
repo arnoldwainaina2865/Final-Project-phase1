@@ -158,6 +158,45 @@ function updateCurrencyCharts() {
             }
         }
     });
-    
+
+
+    const toCtx = document.getElementById('toCurrencyChart').getContext('2d');
+    toCurrencyChart = new Chart(toCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: `${toCurrency} Yearly Trend`,
+                data: generateStaticChartData(),
+                borderColor: 'rgb(255, 99, 132)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: `${toCurrency} Exchange Rate Trend`
+                }
+            }
+        }
+    });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    populateCurrencyDropdowns();
+    createStaticCurrencyTrendCards();
+    
+    updateCurrencyCharts();
+});
+
+convertBtn.addEventListener('click', convertCurrency);
+swapBtn.addEventListener('click', swapCurrencies);
+amountInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        convertCurrency();
+    }
+});
+
 
