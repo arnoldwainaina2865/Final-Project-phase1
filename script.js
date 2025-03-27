@@ -52,24 +52,20 @@ let fromCurrencyChart = null;
 let toCurrencyChart = null;
 
 function populateCurrencyDropdowns() {
-    const currencies = Object.keys(exchangeRates);
-    
-    currencies.forEach(currency => {
-        const fromOption = document.createElement('option');
-        fromOption.value = currency;
-        fromOption.textContent = `${currency} - ${getCurrencyName(currency)}`;
+    Object.keys(currencyData).forEach(currency => {
+        const fromOption = createCurrencyOption(currency);
+        const toOption = createCurrencyOption(currency);
+        
         fromCurrencySelect.appendChild(fromOption);
-
-        const toOption = document.createElement('option');
-        toOption.value = currency;
-        toOption.textContent = `${currency} - ${getCurrencyName(currency)}`;
         toCurrencySelect.appendChild(toOption);
     });
 
     fromCurrencySelect.value = 'USD';
     toCurrencySelect.value = 'EUR';
-}
 
+    fromCurrencySelect.addEventListener('change', updateCurrencyCharts);
+    toCurrencySelect.addEventListener('change', updateCurrencyCharts);
+}
 function getCurrencyName(currencyCode) {
     const currencyNames = {
         "USD": "United States Dollar",
