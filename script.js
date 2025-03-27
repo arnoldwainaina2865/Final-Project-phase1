@@ -66,6 +66,37 @@ function populateCurrencyDropdowns() {
     fromCurrencySelect.addEventListener('change', updateCurrencyCharts);
     toCurrencySelect.addEventListener('change', updateCurrencyCharts);
 }
+
+function convertCurrency() {
+    const fromCurrency = fromCurrencySelect.value;
+    const toCurrency = toCurrencySelect.value;
+    const amount = parseFloat(amountInput.value);
+
+    if (isNaN(amount) || amount <= 0) {
+        resultDisplay.innerHTML = `
+            <span class="conversion-text">Please enter a valid amount</span>
+            <span class="conversion-amount">--</span>
+        `;
+        return;
+    }
+
+    try {
+        const convertedAmount = (amount / exchangeRates[fromCurrency]) * exchangeRates[toCurrency];
+        
+        resultDisplay.innerHTML = `
+            <span class="conversion-text">${amount.toFixed(2)} ${fromCurrency} = </span>
+            <span class="conversion-amount">${convertedAmount.toFixed(2)} ${toCurrency}</span>
+        `;
+
+        updateCurrencyCharts();
+    } catch (error) {
+        resultDisplay.innerHTML = `
+            <span class="conversion-text">Conversion error</span>
+            <span class="conversion-amount">--</span>
+        `;
+        console.error(error);
+    }
+}
 function getCurrencyName(currencyCode) {
     const currencyNames = {
         "USD": "United States Dollar",
