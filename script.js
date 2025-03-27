@@ -28,6 +28,18 @@ const exchangeRates = {
    
 };
 
+// Static market trends data
+const staticMarketTrends = [
+    { currency: 'USD', change: 0.15, isPositive: true },
+    { currency: 'EUR', change: -0.10, isPositive: false },
+    { currency: 'GBP', change: 0.05, isPositive: true },
+    { currency: 'JPY', change: -0.08, isPositive: false },
+    { currency: 'CAD', change: 0.12, isPositive: true },
+    { currency: 'KES', change: 0.72, isPositive: true },
+    { currency: 'INR', change: 0.92, isPositive: true },
+    { currency: 'BRL', change: 0.92, isPositive: true },
+];
+
 const fromCurrencySelect = document.getElementById('fromCurrency');
 const toCurrencySelect = document.getElementById('toCurrency');
 const amountInput = document.getElementById('amount');
