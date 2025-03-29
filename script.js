@@ -12,7 +12,7 @@ const currencyData = {
     BRL: { name: "Brazilian Real", flag: "br", symbol: "R$" },
    
 };
-// major currencies
+
 const exchangeRates = {
     USD: 1.0,
     EUR: 0.92,
@@ -65,6 +65,16 @@ function populateCurrencyDropdowns() {
 
     fromCurrencySelect.addEventListener('change', updateCurrencyCharts);
     toCurrencySelect.addEventListener('change', updateCurrencyCharts);
+}
+
+function createCurrencyOption(currency) {
+    const option = document.createElement('option');
+    option.value = currency;
+    option.innerHTML = `
+        <img src="https://flagcdn.com/w20/${currencyData[currency].flag}.png" class="currency-flag" width="20" height="15">
+        ${currency} - ${currencyData[currency].name}
+    `;
+    return option;
 }
 
 function convertCurrency() {
@@ -129,6 +139,10 @@ function createStaticCurrencyTrendCards() {
     });
 }
 
+function generateStaticChartData() {
+    return [1.0, 1.05, 0.98, 1.02, 0.95, 1.1, 1.03, 0.97, 1.08, 1.01, 0.99, 1.06];
+}
+
 function updateCurrencyCharts() {
     const fromCurrency = fromCurrencySelect.value;
     const toCurrency = toCurrencySelect.value;
@@ -158,7 +172,6 @@ function updateCurrencyCharts() {
             }
         }
     });
-
 
     const toCtx = document.getElementById('toCurrencyChart').getContext('2d');
     toCurrencyChart = new Chart(toCtx, {
@@ -198,5 +211,3 @@ amountInput.addEventListener('keypress', (event) => {
         convertCurrency();
     }
 });
-
-
